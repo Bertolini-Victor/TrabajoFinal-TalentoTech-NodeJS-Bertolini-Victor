@@ -15,7 +15,7 @@ async function request(path, options) {
 }
 
 function isValidId(value) {
-	return Number.isInteger(Number(value)) && Number(value) > 0;
+	return /^\d+$/.test(value) && Number(value) > 0;
 }
 
 function showHelp() {
